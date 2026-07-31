@@ -9,9 +9,6 @@ This is a Homebrew tap containing macOS apps and CLI tools by jsmenzies.
 PRHQ delivers real-time GitHub pull-request and CI notifications through a
 native macOS menu-bar and notch experience.
 
-> **Pre-release test:** the current PRHQ cask exists for the public Task D5
-> distribution rehearsal. It is not the public V1 release.
-
 ```bash
 brew install --cask jsmenzies/tap/prhq
 ```

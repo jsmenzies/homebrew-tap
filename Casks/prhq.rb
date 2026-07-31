@@ -1,6 +1,6 @@
 cask "prhq" do
-  version "0.0.2"
-  sha256 "e3ea754ec4d2e122bf4c3e800727bcb7d05716aa979d625f2ef59c9b1a4b74b1"
+  version "1.0.0"
+  sha256 "2d6e7dfccd49f3b1a05288c72f8d8a6c6b8d78671653e3e4a931ff3ee995e3e0"
 
   url "https://github.com/jsmenzies/prhq-releases/releases/download/v#{version}/PRHQ-#{version}.dmg"
   name "PRHQ"
@@ -8,14 +8,8 @@ cask "prhq" do
   homepage "https://prhq.app/"
 
   livecheck do
-    url "https://github.com/jsmenzies/prhq-releases/releases"
-    strategy :github_releases do |json, regex|
-      json.filter_map do |release|
-        next if release["draft"]
-
-        release["tag_name"]&.[](regex, 1)
-      end
-    end
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true
